@@ -1,0 +1,21 @@
+name: Build en DEV_JBCR
+
+on:
+  push:
+    branches:
+      - DEV_JBCR
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v2
+      with:
+        repository: juliobautistaSFTK/TallerGITHUB
+        ref: DEV_JBCR
+
+    - name: Build with Maven
+      run: mvn -B package --file hola-mundo/pom.xml
