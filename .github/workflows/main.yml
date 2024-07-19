@@ -1,0 +1,13 @@
+name: Action push
+
+on:
+  push:
+ 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Imprimir mensaje
+      run: echo "¡Hola, este es un ejemplo de GitHub Actions que se ejecuta cada que hago push"
