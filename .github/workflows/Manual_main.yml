@@ -1,0 +1,19 @@
+name: Prueba Manual
+
+on:
+  workflow_dispatch:  # Disparador manual
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Imprimir mensaje
+      run: echo "¡Hola! Este es un flujo de trabajo de prueba ejecutado manualmente."
+    - name: Checkout código
+      uses: actions/checkout@v2
+      with:
+        repository: juliobautistaSFTK/TallerGITHUB
+        ref: main
+    - name: Cat de archivo llamado prueba
+      run: cat Prueba
