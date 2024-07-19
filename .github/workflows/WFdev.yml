@@ -1,0 +1,23 @@
+name: Ejecutar en DEV
+
+on:
+  push:
+    branches:
+      - DEV
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v2
+      with:
+        repository: juliobautistaSFTK/TallerGITHUB
+        ref: DEV
+
+    - name: Imprimir mensaje
+      run: echo "Se hizo push a la rama DEV. Ejecutando flujo de trabajo..."
+
+    - name: Cat de archivo Pruebas
+      run: cat Prueba      
