@@ -18,7 +18,7 @@ jobs:
         ref: DEV_JBCR
 
     - name: Build with Maven
-      run: mvn clean -B package --file hola-mundo/pom.xml
+      run: mvn clean package --file hola-mundo/pom.xml
 
     - name: Contenido del JAR
       run: jar tf /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar
@@ -30,4 +30,4 @@ jobs:
       run: cat META-INF/MANIFEST.MF
 
     - name: Ejecutar el JAR
-      run: java -jar /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar      
+      run: java -jar target/hola-mundo-1.0-SNAPSHOT.jar      
