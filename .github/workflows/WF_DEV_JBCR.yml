@@ -23,5 +23,11 @@ jobs:
     - name: Contenido del JAR
       run: jar tf /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar
 
+    - name: Extrae el MANIFEST
+      run: jar xf target/hola-mundo-1.0-SNAPSHOT.jar META-INF/MANIFEST.MF
+
+    - name: muestra el MANIFEST
+      run: cat META-INF/MANIFEST.MF
+
     - name: Ejecutar el JAR
       run: java -jar /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar      
