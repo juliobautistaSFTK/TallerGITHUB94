@@ -21,7 +21,7 @@ jobs:
       run: mvn clean -B package --file hola-mundo/pom.xml
 
     - name: Contenido del JAR
-      run: jar tf target/hola-mundo-1.0-SNAPSHOT.jar
+      run: jar tf /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar
 
     - name: Ejecutar el JAR
-      run: java -jar hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar      
+      run: java -jar /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar      
