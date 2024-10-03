@@ -29,5 +29,8 @@ jobs:
     - name: muestra el MANIFEST
       run: cat META-INF/MANIFEST.MF
 
+    - name: Donde estoy
+      run: pwd        
+
     - name: Ejecutar el JAR
-      run: java -jar target/hola-mundo-1.0-SNAPSHOT.jar      
+      run: mvn exec:java -Dexec.mainClass="com.ejemplo.App"      
