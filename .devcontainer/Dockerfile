@@ -1,11 +1,8 @@
-# Usa la imagen oficial de MySQL 8
-FROM mysql:8.0
+# Usa la imagen oficial de Nginx
+FROM nginx:latest
 
-# Establece variables de entorno para MySQL
-ENV MYSQL_ROOT_PASSWORD=root
-ENV MYSQL_DATABASE=mibase1
-ENV MYSQL_USER=root
-ENV MYSQL_PASSWORD=Canada
+# Copia tu archivo HTML (opcional)
+COPY index.html /usr/share/nginx/html/index.html
 
-# Exponer el puerto 3306
-EXPOSE 3306
+# Exponer el puerto 80
+EXPOSE 80
