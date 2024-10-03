@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mibase1
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Canada
