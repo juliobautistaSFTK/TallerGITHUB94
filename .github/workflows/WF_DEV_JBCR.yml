@@ -19,3 +19,6 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file hola-mundo/pom.xml
+
+    - name: Ejecutar el JAR
+      run: java -jar hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar
