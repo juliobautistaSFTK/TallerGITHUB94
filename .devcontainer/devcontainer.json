@@ -1,12 +1,9 @@
 {
-    "name": "MySQL 8 Dev Container",
+    "name": "Nginx Dev Container",
     "build": {
         "dockerfile": "Dockerfile"
     },
     "settings": {},
-    "extensions": [
-        "ms-azuretools.vscode-docker"
-    ],
-    "forwardPorts": [3306],
-    "postCreateCommand": "docker-compose up -d"
+    "forwardPorts": [80],
+    "postCreateCommand": "echo 'Nginx container is ready!'"
 }
