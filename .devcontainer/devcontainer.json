@@ -4,6 +4,6 @@
     "service": "nginx", // nombre del servicio en docker-compose
     "settings": {},
     "forwardPorts": [80],
-    "postCreateCommand": "apt-get update && apt-get install -y maven docker.io && systemctl enable docker && systemctl start docker",
+    "postCreateCommand": "apt-get update && apt-get install -y maven docker.io",
     "remoteUser": "root"
 }
