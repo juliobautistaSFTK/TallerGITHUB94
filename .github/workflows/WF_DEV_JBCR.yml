@@ -20,17 +20,8 @@ jobs:
     - name: Build with Maven
       run: mvn clean package --file hola-mundo/pom.xml
 
-    - name: Contenido del JAR
-      run: jar tf /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar
-
-    - name: Extrae el MANIFEST
-      run: jar xf /home/runner/work/TallerGITHUB94/TallerGITHUB94/hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar META-INF/MANIFEST.MF
-
-    - name: muestra el MANIFEST
-      run: cat META-INF/MANIFEST.MF
-
-    - name: Donde estoy
-      run: pwd        
+    - name: Test Build
+      run: mvn test --file hola-mundo/pom.xml
 
     - name: Ejecutar el JAR
       run: mvn -f hola-mundo/pom.xml exec:java -Dexec.mainClass="com.ejemplo.App"      
