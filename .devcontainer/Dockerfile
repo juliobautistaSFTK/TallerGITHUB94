@@ -1,7 +1,9 @@
-# Usa la imagen oficial de Nginx
 FROM nginx:latest
 
-# Copia tu archivo HTML (opcional)
+# Instalar Maven y Docker
+RUN apt-get update && apt-get install -y maven docker.io
+
+# Copia tu archivo HTML
 COPY index.html /usr/share/nginx/html/index.html
 
 # Exponer el puerto 80
