@@ -1,9 +1,20 @@
 {
-    "name": "Nginx Dev Container",
-    "dockerComposeFile": "docker-compose.yml", // si usas docker-compose
-    "service": "nginx", // nombre del servicio en docker-compose
-    "settings": {},
-    "forwardPorts": [80],
-    "postCreateCommand": "apt-get update && apt-get install -y maven docker.io",
-    "remoteUser": "root"
+  "name": "Maven and Docker Development Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:latest",
+  "features": {
+    "docker-in-docker": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "mvn --version",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "java.home": "/usr/local/openjdk-11",
+    "maven.executable.path": "/usr/bin/mvn"
+  },
+  "extensions": [
+    "redhat.vscode-maven",
+    "vscjava.vscode-java-pack"
+  ],
+  "remoteUser": "vscode"
 }
