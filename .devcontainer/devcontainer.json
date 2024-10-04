@@ -1,9 +1,9 @@
 {
     "name": "Nginx Dev Container",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "dockerComposeFile": "docker-compose.yml", // si usas docker-compose
+    "service": "nginx", // nombre del servicio en docker-compose
     "settings": {},
     "forwardPorts": [80],
-    "postCreateCommand": "echo 'Nginx container is ready!'"
+    "postCreateCommand": "apt-get update && apt-get install -y maven docker.io && systemctl enable docker && systemctl start docker",
+    "remoteUser": "root"
 }
