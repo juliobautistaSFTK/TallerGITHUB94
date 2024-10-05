@@ -1,4 +1,4 @@
-name: Build en DEV_JBCR
+name: Build en JBCR
 
 on:
   push:
@@ -18,12 +18,4 @@ jobs:
         ref: DEV_JBCR
 
     - name: Build with Maven
-
-      run: mvn clean package --file hola-mundo/pom.xml
-
-    - name: Test Build
-      run: mvn test --file hola-mundo/pom.xml
-
-    - name: Ejecutar el JAR
-      run: mvn -f hola-mundo/pom.xml exec:java -Dexec.mainClass="com.ejemplo.App"      
-
+      run: mvn -B package --file hola-mundo/pom.xml

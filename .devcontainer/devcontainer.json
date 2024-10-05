@@ -1,0 +1,13 @@
+{
+    "name": "Nginx Dev Container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "nginx",
+    "settings": {},
+    "forwardPorts": [80],
+    "postCreateCommand": "apt-get update && apt-get install -y maven",
+    "remoteUser": "root",
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ]
+}
+
