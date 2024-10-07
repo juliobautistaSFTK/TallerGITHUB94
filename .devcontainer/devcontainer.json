@@ -4,7 +4,7 @@
     "service": "nginx",
     "settings": {},
     "forwardPorts": [80],
-    "postCreateCommand": "apt-get update && apt-get install -y maven",
+    "postCreateCommand": "apt-get update && apt-get install -y maven && mvn -f hola-mundo/pom.xml clean package",
     "remoteUser": "root",
     "mounts": [
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
