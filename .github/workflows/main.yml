@@ -1,13 +1,9 @@
-name: Action push
+name: Main_branch
 
 on:
   push:
- 
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    
+
 jobs:
   build:
 
