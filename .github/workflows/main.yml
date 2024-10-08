@@ -13,8 +13,8 @@ jobs:
     - name: Checkout código
       uses: actions/checkout@v2
       with:
-        repository: juliobautistaSFTK/TallerGITHUB
-        ref: DEV_JBCR
+        repository: juliobautista1/TallerGITHUB94_JBCR
+        ref: JBCR_EXAM1
 
     - name: Build with Maven
 
