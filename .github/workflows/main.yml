@@ -1,12 +1,11 @@
-name: Main_branch
-
-on:
-  push:
+name: Main_branchJBCR
 
 on:
   push:
     branches:
       - ${{ github.ref }}
+jobs:
+  build:      
 
     runs-on: ubuntu-latest
 
