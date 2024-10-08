@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World! desde alumno" );
+        System.out.println( "Hello World! desde rama participante para action" );
     }
 }
