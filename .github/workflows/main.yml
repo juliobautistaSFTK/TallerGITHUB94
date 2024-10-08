@@ -7,9 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
- jobs:
-  build:
+
+on:
+  push:
+    branches:
+      - ${{ github.ref }}
 
     runs-on: ubuntu-latest
 
@@ -17,8 +19,8 @@ jobs:
     - name: Checkout código
       uses: actions/checkout@v2
       with:
-        repository: juliobautistaSFTK/TallerGITHUB
-        ref: DEV_JBCR
+        repository: ${{ github.repository }} 
+        ref: ${{ github.ref }}
 
     - name: Build with Maven
 
