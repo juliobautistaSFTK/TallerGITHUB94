@@ -2,8 +2,7 @@ name: Main_branchJBCR
 
 on:
   push:
-    branches:
-      - ${{ github.ref }}
+
 jobs:
   build:      
 
