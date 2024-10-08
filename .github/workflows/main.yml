@@ -3,9 +3,10 @@ name: Main_branch
 on:
   push:
 
-
-jobs:
-  build:
+on:
+  push:
+    branches:
+      - ${{ github.ref }}
 
     runs-on: ubuntu-latest
 
@@ -13,8 +14,8 @@ jobs:
     - name: Checkout código
       uses: actions/checkout@v2
       with:
-        repository: juliobautista1/TallerGITHUB94_JBCR
-        ref: JBCR_EXAM1
+        repository: ${{ github.repository }}
+        ref: ${{ github.ref }}
 
     - name: Build with Maven
 
