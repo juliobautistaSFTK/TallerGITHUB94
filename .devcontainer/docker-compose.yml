@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock  # Permitir acceso al daemon de Docker
+    ports:
+      - "80:80"
+    build:
+      context: .
+      dockerfile: Dockerfile  # Si tienes un Dockerfile para construir el servicio
+

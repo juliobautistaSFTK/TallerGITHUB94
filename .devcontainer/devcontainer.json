@@ -1,0 +1,13 @@
+{
+    "name": "Nginx Dev Container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "nginx",
+    "settings": {},
+    "forwardPorts": [80],
+    "postCreateCommand": "apt-get update && apt-get install -y maven && mvn -f hola-mundo/pom.xml clean package && java -jar hola-mundo/target/hola-mundo-1.0-SNAPSHOT.jar && cp index.html /usr/share/nginx/html/index.html",
+    "remoteUser": "root",
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ]
+}
+

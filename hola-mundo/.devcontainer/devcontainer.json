@@ -1,0 +1,12 @@
+{
+    "name": "MySQL 8 Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": {},
+    "extensions": [
+        "ms-azuretools.vscode-docker"
+    ],
+    "forwardPorts": [3306],
+    "postCreateCommand": "docker-compose up -d"
+}
