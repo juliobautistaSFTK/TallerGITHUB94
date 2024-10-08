@@ -23,4 +23,4 @@ jobs:
       run: mvn test --file hola-mundo/pom.xml -q
 
     - name: Ejecutar el JAR
-      run: mvn -f hola-mundo/pom.xml exec:java -Dexec.mainClass="com.ejemplo.App"      
+      run: mvn -f hola-mundo/pom.xml exec:java -Dexec.mainClass="com.ejemplo.App" -q    
