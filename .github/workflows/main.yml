@@ -1,13 +1,26 @@
-name: Action push
+name: Main_branchJBCR
 
 on:
   push:
- 
 
 jobs:
-  build:
+  build:      
+
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Imprimir mensaje
-      run: echo "¡Hola, este es un ejemplo de GitHub Actions que se ejecuta cada que hago push"
+    - name: Checkout código
+      uses: actions/checkout@v2
+      with:
+        repository: ${{ github.repository }}
+        ref: ${{ github.ref }}
+
+    - name: Build with Maven
+
+      run: mvn clean package --file hola-mundo/pom.xml -q
+
+    - name: Test Build
+      run: mvn test --file hola-mundo/pom.xml -q
+
+    - name: Ejecutar el JAR
+      run: mvn -f hola-mundo/pom.xml exec:java -Dexec.mainClass="com.ejemplo.App" -q    
